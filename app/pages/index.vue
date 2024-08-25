@@ -1,45 +1,39 @@
-<script setup>
-const runtimeConfig = useRuntimeConfig()
-const colors = ['#f87171', '#fb923c', '#fbbf24', '#facc15', '#a3e635', '#4ade80', '#34d399', '#2dd4bf', '#22d3ee', '#38bdf8', '#60a5fa', '#818cf8', '#a78bfa', '#c084fc', '#e879f9', '#f472b6', '#fb7185']
-const color = useState('color', () => colors[Math.floor(Math.random() * colors.length)])
-</script>
+<script setup></script>
 
 <template>
-  <div class="centered">
-    <h1 :style="{ color }">
-      {{ runtimeConfig.public.helloText }}
-    </h1>
-    <NuxtLink to="/" external>
-      refresh yolo
-    </NuxtLink>
-  </div>
-</template>
+  <UContainer>
+    <div class="flex flex-col gap-4">
+      <h3 class="text-xl text-gray-500">
+        Easy Chicken Tonight
+      </h3>
 
-<style scoped>
-.centered {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-h1 {
-  font-size: 32px;
-}
-@media (min-width: 768px) {
-  h1 {
-    font-size: 64px;
-  }
-}
-a {
-  color: #888;
-  text-decoration: none;
-  font-size: 18px;
-}
-a:hover {
-  text-decoration: underline;
-}
-</style>
+      <h1 class="font-bold text-3xl">
+        Easy Chicken Tonight Hawaï 260g
+      </h1>
+
+      <div class="flex gap-2">
+        <UBadge color="gray" variant="solid">
+          GTIN:<span> 8710581909587</span>
+        </UBadge>
+
+        <UBadge color="gray" variant="solid">
+          Sweet and sour stir-fry sauce with pineapple...
+        </UBadge>
+      </div>
+
+      <p>
+        A fresh sweet and sour stir-fry sauce filled with pineapple, red and
+        green peppers and carrots. No time or don't want to spend a long time in
+        the kitchen? Put a delicious Indonesian meal for 1-2 people on the table
+        in no time with Easy Chicken Tonight Hawaii. Add extra vegetables and
+        possibly (vegetarian) chicken to the sauce according to your own taste.
+        The Chicken Tonight Hawaii sauce combines well with rice.Vegetable
+        Tips:Add 1 grated carrot at the same time as the sauce and let the sauce
+        simmer for 3 minutes longer.Make the sauce nice and sweet by adding some
+        extra pieces of pineapple at the end.Serve a fresh cucumber salad with
+        your dish.
+      </p>
+      <AccordionYolo />
+    </div>
+  </UContainer>
+</template>
